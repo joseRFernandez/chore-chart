@@ -12,7 +12,7 @@ const routes = [
     name: "profilePage",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/profilePage/ProfilePage.vue"
+        /* webpackChunkName: "about" */ "../views/profilePage/TheProfilePage.vue"
       ),
   },
 ];
