@@ -6,10 +6,15 @@
 </template>
 
 <script>
-import TheNavbar from "@/composables/navbar/TheNavbar";
+import TheNavbar from "@/views/navbar/TheNavbar";
+import { getDocs, colRef } from "@/firebase";
+
 export default {
   components: {
     TheNavbar,
+  },
+  mounted() {
+    getDocs(colRef);
   },
 };
 </script>

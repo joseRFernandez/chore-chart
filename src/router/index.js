@@ -9,10 +9,18 @@ const routes = [
   },
   {
     path: "/profile",
-    name: "profilePage",
+    name: "profile-page",
     component: () =>
       import(
-        /* webpackChunkName: "about" */ "../views/profilePage/ProfilePage.vue"
+        /* webpackChunkName: "about" */ "../views/profile/TheProfilePage.vue"
+      ),
+  },
+  {
+    path: "/chores",
+    name: "chore-page",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/chores/TheChorePage.vue"
       ),
   },
 ];
