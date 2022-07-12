@@ -2,6 +2,7 @@
 node_modules
 /dist
 package-lock.json
+src/firebase/secrets.config.js
 
 
 # local env files
