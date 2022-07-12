@@ -26,6 +26,7 @@ module.exports = {
     indent: ["error", 2],
     quotes: ["error", "double"],
     "vue/no-multiple-template-root": 0,
+    "no-trailing-spaces": 0,
   },
 
   overrides: [
