@@ -4,7 +4,7 @@
   .profile-form {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    height: 900px;
 
     .profile-selector-wrapper {
       margin: 0.5rem;
@@ -14,12 +14,16 @@
       }
     }
 
-    .label {
-      padding-left: 1.5rem;
+    .field-section {
+      .single-role-select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .selection-buttons {
-      margin: 0 auto;
+      margin: auto;
     }
   }
 }
