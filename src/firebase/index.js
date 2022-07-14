@@ -1,9 +1,7 @@
-// eslint-disable //
-
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./secrets.config";
 
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection } from "firebase/firestore";
 
 // init app
 initializeApp(firebaseConfig);
@@ -11,17 +9,7 @@ initializeApp(firebaseConfig);
 // init services
 const db = getFirestore();
 
-// collection ref
-const colRef = collection(db, "chores");
+// store collection references here for now
+const membersRef = collection(db, "members");
 
-// get collection data
-// getDocs returns a promise
-getDocs(colRef).then((snapshot) => {
-  let chores = [];
-  snapshot.docs.forEach((doc) => {
-    chores.push({ ...doc.data(), id: doc.id });
-  });
-  console.log(chores);
-});
-
-export { getDocs, colRef };
+export { db, membersRef };
