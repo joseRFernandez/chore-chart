@@ -10,7 +10,7 @@
               class="input is-rounded"
               type="text"
               placeholder="Enter UserName"
-              v-model="userName"
+              v-model="member.userName"
             />
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
@@ -24,12 +24,16 @@
 
         <div class="field">
           <label class="label">Password</label>
-          <div class="control">
+          <div class="control has-icons-left">
             <input
               class="input is-rounded"
               type="password"
               placeholder="Input Password"
+              v-model="member.password"
             />
+            <span class="icon is-small is-left">
+              <i class="fa-solid fa-key"></i>
+            </span>
           </div>
         </div>
 
@@ -40,6 +44,7 @@
               class="input is-rounded"
               type="text"
               placeholder="Input Name"
+              v-model="member.firstName"
             />
           </div>
         </div>
@@ -50,7 +55,7 @@
               class="input is-rounded"
               type="text"
               placeholder="Input Last Name"
-              value="Fernandez"
+              v-model="member.lastName"
             />
           </div>
         </div>
@@ -62,6 +67,7 @@
               class="input is-rounded"
               type="email"
               placeholder="Email input"
+              v-model="member.email"
             />
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
@@ -77,7 +83,7 @@
           <label class="label">Role</label>
           <div class="control">
             <div class="select is-rounded">
-              <select>
+              <select v-model="member.role">
                 <option>Child</option>
                 <option>Parent</option>
               </select>
@@ -91,9 +97,7 @@
           <button class="button is-link is-light">Cancel</button>
         </div>
         <div class="control">
-          <button class="button is-link" @click.prevent="testSwal">
-            Submit
-          </button>
+          <button class="button is-link" @click.prevent="test">Submit</button>
         </div>
       </div>
     </form>
@@ -101,19 +105,30 @@
 </template>
 <script>
 import ProfilePicSelector from "./ProfilePicSelector";
+import { docRef } from "@/firebase/composables/profile-setters";
+
 export default {
   name: "TheProfilePage",
   data() {
     return {
-      userName: "",
+      member: {
+        userName: "",
+        password: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        role: "",
+      },
     };
   },
   components: {
     ProfilePicSelector,
   },
   methods: {
-    testSwal() {
-      this.$swal(this.userName);
+    test() {
+      docRef(this.member).then((refId) => {
+        console.log(refId);
+      });
     },
   },
 };
