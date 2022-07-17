@@ -9,11 +9,6 @@
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
           <router-link to="chores" class="navbar-link"> Chores </router-link>
-
-          <!-- <div class="navbar-dropdown">
-            <a class="navbar-item">Create</a>
-            <hr class="navbar-divider" />
-          </div> -->
         </div>
         <div class="navbar-item">
           <router-link to="profile">Profile</router-link>
