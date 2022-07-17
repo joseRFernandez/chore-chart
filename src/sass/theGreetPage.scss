@@ -1,0 +1,31 @@
+.the-greet-page-wrapper {
+  .the-greet-page {
+    background: linear-gradient(
+      90deg,
+      $primary-blue,
+      $middle-blue,
+      $primary-blue
+    );
+
+    .greet-banner-container {
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+
+  .greet-page-button-wrapper {
+    .greet-page-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+
+      .button {
+        min-width: 120px;
+      }
+    }
+  }
+}
