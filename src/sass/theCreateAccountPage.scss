@@ -1,0 +1,12 @@
+.create-account-page-wrapper {
+  height: calc(100vh - $nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .buttons-group {
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
