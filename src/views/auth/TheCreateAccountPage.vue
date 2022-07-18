@@ -36,7 +36,9 @@
       <div class="buttons-group">
         <div class="buttons">
           <button class="button is-link" @click="resetForm">Reset</button>
-          <button class="button is-primary">Create</button>
+          <button class="button is-primary" @click="betaHandleSubmit">
+            Create
+          </button>
         </div>
       </div>
     </section>
@@ -44,6 +46,8 @@
 </template>
 
 <script>
+import { createdUser } from "../../firebase/composables/auth/create-account";
+
 export default {
   name: "the-create-account-page",
   data() {
@@ -58,6 +62,10 @@ export default {
       this.chosenUserName = "";
       this.givenEmail = "";
       this.chosenPassword = "";
+    },
+    betaHandleSubmit() {
+      const newUser = { email: this.givenEmail, password: this.chosenPassword };
+      createdUser(newUser);
     },
   },
 };
