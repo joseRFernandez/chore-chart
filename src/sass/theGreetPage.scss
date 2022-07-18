@@ -23,8 +23,14 @@
       display: flex;
       justify-content: space-evenly;
 
+      @media screen and (min-width: $large-mobile) {
+        justify-content: center;
+      }
       .button {
         min-width: 120px;
+        @media screen and (min-width: $large-mobile) {
+          margin: 0 3rem;
+        }
       }
     }
   }

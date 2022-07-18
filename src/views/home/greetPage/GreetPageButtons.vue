@@ -7,8 +7,8 @@
             class="button is-info is-outlined"
             @click="betaCreateAccount"
           >
-            Create Account</button
-          >\</router-link
+            Create Account
+          </button></router-link
         >
         <button class="button is-info">Log In</button>
       </div>
