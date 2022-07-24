@@ -2,7 +2,7 @@
   <section class="hero is-halfheight greet-page-button-wrapper">
     <div class="hero-body is-flex is-flex-direction-column">
       <div class="greet-page-buttons">
-        <router-link to="create-account"
+        <router-link :to="{ name: 'create-account-page' }"
           ><button
             class="button is-info is-outlined"
             @click="betaCreateAccount"

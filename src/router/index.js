@@ -31,6 +31,12 @@ const routes = [
         /* webpackChunkName: "about" */ "../views/chores/TheChorePage.vue"
       ),
   },
+  {
+    // todo: set up a 404 page to catch all unmatched routes
+    path: "/:catchAll(.*)*",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/home/HomePage.vue"),
+  },
 ];
 
 const router = createRouter({

@@ -35,7 +35,6 @@
       </div>
       <div class="buttons-group">
         <div class="buttons">
-          <button class="button is-link" @click="resetForm">Reset</button>
           <button class="button is-primary" @click="betaHandleSubmit">
             Create
           </button>
@@ -46,7 +45,7 @@
 </template>
 
 <script>
-import { createdUser } from "../../firebase/composables/auth/create-account";
+import { createdUser } from "../../firebase/composables/auth/auth-funcs";
 
 export default {
   name: "the-create-account-page",
