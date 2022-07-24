@@ -8,10 +8,12 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <router-link to="chores" class="navbar-link"> Chores </router-link>
+          <router-link :to="{ name: 'chore-page' }" class="navbar-link">
+            Chores
+          </router-link>
         </div>
         <div class="navbar-item">
-          <router-link to="profile">Profile</router-link>
+          <router-link :to="{ name: 'profile-page' }">Profile</router-link>
         </div>
         <hr />
         <div class="navbar-item">Log Out</div>
